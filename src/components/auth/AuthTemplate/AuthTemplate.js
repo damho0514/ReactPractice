@@ -7,8 +7,9 @@ const AuthTemplate = ({ children }) => {
         <Wrapper>
             <WhiteBox>
                 <LogoWrapper>
-                    <Link to="/">{children}</Link>
+                    <Link to="/">REACTERS</Link>
                 </LogoWrapper>
+                {children}
             </WhiteBox>
         </Wrapper>
     );
