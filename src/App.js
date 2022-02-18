@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import PostListPage from "./pages/PostListPage";
 import WritePage from "./pages/WritePage";
 import LoginPage from "./pages/Login/LoginPage";
-import RegisterPage from "./pages/RegisterPage";
+import RegisterPage from "./pages/Register/RegisterPage";
 import PostPage from "./pages/PostPage";
 function App() {
     return (
