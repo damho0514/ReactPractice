@@ -9,7 +9,7 @@ export const Htag = styled.h3`
     margin-bottom: 1rem;
 `;
 
-export const FormWrapper = styled.div`
+export const CustomForm = styled.form`
     /* border: 1px solid blue; */
     display: flex;
     flex-direction: column;
