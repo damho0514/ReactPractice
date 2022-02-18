@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import {
     Wrapper,
     Htag,
-    FormWrapper,
+    CustomForm,
     InputBox,
     SubmitButton,
     FooterBox,
@@ -14,22 +14,35 @@ const textMap = {
     register: "회원가입",
 };
 
-const AuthForm = ({ type }) => {
+const AuthForm = ({ type, form, onChange, onSubmit }) => {
     return (
         <Wrapper>
             <Htag>{textMap[type]}</Htag>
-            <FormWrapper>
-                <InputBox placeholder="아이디" />
-                <InputBox placeholder="비밀번호" type="password" />
+            <CustomForm onSubmit={onSubmit}>
+                <InputBox
+                    placeholder="아이디"
+                    onChange={onChange}
+                    name="username"
+                    value={form.username}
+                />
+                <InputBox
+                    name="password"
+                    placeholder="비밀번호"
+                    type="password"
+                    value={form.password}
+                    onChange={onChange}
+                />
                 {type === "register" && (
-                    <input
-                        name=""
+                    <InputBox
+                        name="passwrodConfirm"
                         placeholder="비밀번호 확인"
+                        value={form.passwrodConfirm}
                         type="password"
+                        onChange={onChange}
                     />
                 )}
                 <SubmitButton type="submit">{textMap[type]}</SubmitButton>
-            </FormWrapper>
+            </CustomForm>
             <FooterBox>
                 {type === "login" ? (
                     <Link to="/register">회원가입</Link>
